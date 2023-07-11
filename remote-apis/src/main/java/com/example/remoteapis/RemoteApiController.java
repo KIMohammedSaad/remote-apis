@@ -18,4 +18,11 @@ public class RemoteApiController {
         Object responseObject = restTemplate.getForObject(url,Object.class);
         return responseObject;
     }
+
+    @GetMapping("/get_custom_details")
+    public MovieResponse getCustomMoviesDetails(){
+        String url = "https://api.themoviedb.org/3/movie/157336?api_key=28c3592f0f0c9e4977ed983787543d40";
+        MovieResponse responseObject = restTemplate.getForObject(url,MovieResponse.class);
+        return responseObject;
+    }
 }
