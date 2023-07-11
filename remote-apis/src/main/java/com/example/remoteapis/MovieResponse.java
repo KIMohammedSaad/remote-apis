@@ -4,14 +4,24 @@ public class MovieResponse {
     private int budget;
     private String imdb_id;
     private String original_title;
+    private String random;
 
     public MovieResponse() {
     }
 
-    public MovieResponse(int budget, String imdb_id, String original_title) {
+    public MovieResponse(int budget, String imdb_id, String original_title, String random) {
         this.budget = budget;
         this.imdb_id = imdb_id;
         this.original_title = original_title;
+        this.random = random;
+    }
+
+    public String getRandom() {
+        return random;
+    }
+
+    public void setRandom(String random) {
+        this.random = random;
     }
 
     public int getBudget() {

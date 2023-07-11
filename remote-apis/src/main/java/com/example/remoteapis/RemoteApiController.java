@@ -25,4 +25,11 @@ public class RemoteApiController {
         MovieResponse responseObject = restTemplate.getForObject(url,MovieResponse.class);
         return responseObject;
     }
+
+    @GetMapping("/get_madrid")
+    public String getFootballDetails(){
+        String url = "http://localhost:9999/football/madrid";
+        String responseObject = restTemplate.getForObject(url,String.class);
+        return responseObject;
+    }
 }
